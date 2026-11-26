@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptLab - AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-mark">P</div>
+            PromptLab
+        </div>
+        <p>AI Prompt Generator for Students</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <span class="eyebrow">YOUR AI STUDY COMPANION</span>
+            <h1>Turn Your Ideas Into<br>
+                <span>Better AI Prompts.</span>
+            </h1>
+            <p>
+                Create effective AI prompts for assignments,
+                research, presentations, coding and creative projects.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div class="workspace">
+
+            <section class="panel">
+                <div class="panel-head">
+                    <h2>Build Your Prompt</h2>
+                    <span class="step">STEP 1</span>
+                </div>
+
+                <div class="form-body">
+
+                    <div class="field">
+                        <label>Choose Your Task</label>
+
+                        <div class="chips">
+                            <button class="chip active" data-task="Study and Learn">Study</button>
+                            <button class="chip" data-task="Research">Research</button>
+                            <button class="chip" data-task="Presentation">Presentation</button>
+                            <button class="chip" data-task="Writing">Writing</button>
+                            <button class="chip" data-task="Coding">Coding</button>
+                            <button class="chip" data-task="Creative Project">Creative</button>
+                        </div>
+
+                        <input type="hidden" id="task" value="Study and Learn">
+                    </div>
+
+                    <div class="field">
+                        <label for="goal">What Do You Want AI To Do?</label>
+                        <textarea id="goal"
+                            placeholder="Example: Explain Artificial Intelligence in simple terms..."></textarea>
+                    </div>
+
+                    <div class="grid2">
+
+                        <div class="field">
+                            <label for="audience">Target Audience</label>
+                            <select id="audience">
+                                <option>College Beginner</option>
+                                <option>Undergraduate Student</option>
+                                <option>Advanced Student</option>
+                                <option>General Audience</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="tone">Writing Style</label>
+                            <select id="tone">
+                                <option>Simple and Student Friendly</option>
+                                <option>Formal and Academic</option>
+                                <option>Creative and Engaging</option>
+                                <option>Technical and Detailed</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="grid2">
+
+                        <div class="field">
+                            <label for="format">Output Format</label>
+                            <select id="format">
+                                <option>Step-by-Step Explanation</option>
+                                <option>Bullet Point Summary</option>
+                                <option>Essay</option>
+                                <option>Table</option>
+                                <option>Presentation Outline</option>
+                                <option>Code with Explanation</option>
+                                <option>Quiz Questions</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="length">Detail Level</label>
+                            <select id="length">
+                                <option>Balanced Detail</option>
+                                <option>Short and Concise</option>
+                                <option>Detailed Explanation</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+                        <label for="context">Additional Context (Optional)</label>
+                        <textarea id="context"
+                            placeholder="Enter subject details, course requirements or other information..."></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="constraints">Special Instructions (Optional)</label>
+                        <input type="text" id="constraints"
+                            placeholder="Example: Include real-world examples">
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn primary" id="generate">
+                            Generate My Prompt
+                        </button>
+
+                        <button class="btn secondary" id="reset">
+                            Reset
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="panel output-panel">
+
+                <div class="output-top">
+                    <h2>Generated Prompt</h2>
+                    <span class="live">● Ready</span>
+                </div>
+
+                <div class="output-wrap">
+
+                    <div class="output empty" id="output">
+                        Your generated prompt will appear here.
+                        Enter your details and click Generate.
+                    </div>
+
+                    <div class="output-footer">
+                        <span id="wordcount">0 words</span>
+
+                        <button class="btn copy" id="copy" disabled>
+                            Copy Prompt
+                        </button>
+                    </div>
+
+                    <div class="tips">
+                        <strong>Prompt Engineering Tip</strong>
+                        <p>
+                            A good prompt includes a clear task,
+                            relevant context and a specific output format.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        PromptLab | AI Prompt Generator for College Students
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
